@@ -13,6 +13,10 @@ interface ModalProps {
   editData: any;
 }
 
+// isOpen,
+// onClose,
+// onSubmit,
+
 const EditModal = ({
   isOpen,
   onClose,

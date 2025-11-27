@@ -26,7 +26,7 @@ const Todo = () => {
   const [isItemShowOpen, setIsItemShowOpen] = useState(false);
   const [itemData, setItemData] = useState<TodoItem | null>(null);
 
-  const [tabledata, setTabledata] = useState([]);
+  // const [tabledata, setTabledata] = useState([]);
 
   const getTodos = async () => {
     const res = await axios.get("http://localhost:4000/tasks", {
@@ -49,6 +49,8 @@ const Todo = () => {
       return getTodos();
     },
   });
+
+  // console.log(tabledata);
 
   const handleAddTodo = () => {
     setIsModalOpen(true);
@@ -126,7 +128,7 @@ const Todo = () => {
 
   const onScrollEnd = () => {
     setPagination(pagination + 5);
-    // refetch();
+    refetch();
   };
 
   return (
